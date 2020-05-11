@@ -4,12 +4,18 @@
   
   
   <entry>
-    <title>My New Post</title>
-    <link href="/2020/05/11/My-New-Post/"/>
-    <url>/2020/05/11/My-New-Post/</url>
+    <title>Vue中常见的性能优化</title>
+    <link href="/2020/05/08/Vue%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <url>/2020/05/08/Vue%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="Vue-js中常见性能优化"><a href="#Vue-js中常见性能优化" class="headerlink" title="Vue.js中常见性能优化"></a>Vue.js中常见性能优化</h1><h2 id="编码优化"><a href="#编码优化" class="headerlink" title="编码优化"></a>编码优化</h2><ul><li>不要将所有的数据都放在data中，data中的数据都会增加getter和setter的负担</li><li>SPA页面采用keep-alive缓存组件</li><li>拆分组件（提高复用性、增加代码可维护性、减少不必要的渲染）</li><li>v-if 当值为false的时候内部指令不会执行，具有阻断功能，推荐使用v-if     （v-if不存在dom树，v-show相当于display）</li><li>合理使用路由懒加载、异步组件</li><li>数据持久化（防抖、节流）</li></ul><h2 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h2><ul><li><code>app-skeleton</code>骨架屏</li><li><code>app-shell</code>app壳</li></ul><h2 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h2><ul><li>服务端渲染<code>ssr</code></li></ul><h2 id="缓存、压缩"><a href="#缓存、压缩" class="headerlink" title="缓存、压缩"></a>缓存、压缩</h2><ul><li>客户端缓存、服务端缓存</li><li>服务端<code>gzip</code>压缩</li></ul>]]></content>
     
+    
+    <categories>
+      
+      <category>Vue</category>
+      
+    </categories>
     
     
   </entry>
@@ -17,12 +23,18 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2020/05/11/hello-world/"/>
-    <url>/2020/05/11/hello-world/</url>
+    <title>V-model数据双向绑定原理</title>
+    <link href="/2020/05/08/postV-model%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86/"/>
+    <url>/2020/05/08/postV-model%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="关于MVVM那些事儿…"><a href="#关于MVVM那些事儿…" class="headerlink" title="关于MVVM那些事儿…."></a>关于MVVM那些事儿….</h1><h2 id="什么是MVVM"><a href="#什么是MVVM" class="headerlink" title="什么是MVVM?"></a>什么是MVVM?</h2><p>M：数据层 model</p><p>V：视图层 view</p><p>VM：组件实例ViewModel</p><p>MVVM是一种设计思想，在MVVM结构下，View和Model是没有直接联系的，通过VM组件实例做桥梁，只要其中一个层数据发生改变，两边的数据会同步。从而达到无需操作DOM原生，即可实现数据的双向绑定。</p><h2 id="什么是虚拟DOM"><a href="#什么是虚拟DOM" class="headerlink" title="什么是虚拟DOM?"></a>什么是虚拟<strong>DOM</strong>?</h2><p> 虚拟dom实际是  :<strong>将原生dom树结构用数据的方式描述成一个真实的dom</strong></p><p>如果我们要改变dom中的结构，只能通过遍历的形式查询dom树的方式，找到需要修改的dom，然后修改样式行为或者结构，从而使数据驱动试图。</p><h2 id="Vue是怎么实现数据劫持的"><a href="#Vue是怎么实现数据劫持的" class="headerlink" title="Vue是怎么实现数据劫持的?"></a>Vue是怎么实现数据劫持的?</h2><p>通过  <strong>Object.defineProperty() 方法</strong>   中的get和set函数来劫持（监听）数据的变化，一旦数据发生了改变，就会驱动视图的改变。</p><p> <strong>Object.defineProperty该方法可以对象的属性进行数据属性和访问器属性进行定义</strong></p><p><strong>get方法：监听值</strong></p><p><strong>set方法：设置值</strong></p><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">defineReactive</span> (<span class="hljs-params">obj, key</span>) </span>&#123;  <span class="hljs-keyword">let</span> val = obj[key]  <span class="hljs-comment">//val是对象的每个属性的值</span>  <span class="hljs-built_in">Object</span>.defineProperty(obj, key, &#123; <span class="hljs-comment">//定义需要监听的属性</span>    <span class="hljs-keyword">get</span> () &#123;  <span class="hljs-comment">//当属性被访问时候就会调用get的返回值,该函数的返回值会被用作属性的值</span>      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">' === 收集依赖 === '</span>)      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">' 当前值为：'</span> + val)      <span class="hljs-keyword">return</span> val    &#125;,    <span class="hljs-keyword">set</span> (newValue) &#123;      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">' === 通知变更 === '</span>)      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">' 当前值为：'</span> + newValue)      val = newValue <span class="hljs-comment">//给val重新赋值</span>    &#125;  &#125;)&#125;<span class="hljs-comment">//例如:</span><span class="hljs-keyword">const</span> student = &#123;  name: <span class="hljs-string">'xiaoming'</span>&#125;defineReactive(student, <span class="hljs-string">'name'</span>) <span class="hljs-comment">// 劫持 name 属性的读取和设置操作</span></code></pre><h2 id="什么是diff算法"><a href="#什么是diff算法" class="headerlink" title="什么是diff算法?"></a>什么是diff算法?</h2><p>diff算法的目的是为了局部刷新组件，优化了遍历dom树的操作，数据双向绑定后值发生了变化，就不需要从新渲染全局组件了。</p>]]></content>
     
+    
+    <categories>
+      
+      <category>Vue</category>
+      
+    </categories>
     
     
   </entry>

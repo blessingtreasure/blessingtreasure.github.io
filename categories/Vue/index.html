@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>Hexo</title>
+  <title>分类 - Vue - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
@@ -46,7 +46,7 @@
 
 
 <body>
-  <header style="height: 100vh;">
+  <header style="height: 60vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -132,10 +132,6 @@
           </div>
 
           
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
-          
         </div>
       </div>
     </div>
@@ -145,90 +141,33 @@
     
       <div class="container nopadding-md">
         <div class="py-5" id="board"
-          style=margin-top:0>
+          >
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-
-  <div class="row mx-auto index-card">
+<div class="list-group">
+<!--  <p class="h4">共计 2 篇文章</p>-->
+  <hr>
+  
     
+      
+      <p class="h5">2020</p>
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/05/08/Vue%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">Vue中常见的性能优化</a>
-
-      <a href="/2020/05/08/Vue%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="index-excerpt">
-        
-        
-          
-        
-        <div>Vue.js中常见性能优化编码优化
-不要将所有的数据都放在data中，data中的数据都会增加getter和setter的负担
-SPA页面采用keep-alive缓存组件
-拆分组件（提高复用性、增加代码可维护性、减少不必要的渲染）
-v-if 当值为false的时候内部指令不会执行，具有阻断功能，推荐使用v-if     （v-if不存在dom树，v-show相当于display）
-合理使用路由懒加</div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-05-08
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Vue/">Vue</a>
-            
-          </div>
-        
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
+    <a href="/2020/05/08/Vue%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">Vue中常见的性能优化</span>
+      <span style="float: right;">05-08</span>
+    </a>
+  
     
-    
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/05/08/postV-model%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86/">V-model数据双向绑定原理</a>
-
-      <a href="/2020/05/08/postV-model%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86/" class="index-excerpt">
-        
-        
-          
-        
-        <div>关于MVVM那些事儿….什么是MVVM?M：数据层 model
-V：视图层 view
-VM：组件实例ViewModel
-MVVM是一种设计思想，在MVVM结构下，View和Model是没有直接联系的，通过VM组件实例做桥梁，只要其中一个层数据发生改变，两边的数据会同步。从而达到无需操作DOM原生，即可实现数据的双向绑定。
-什么是虚拟DOM? 虚拟dom实际是  :将原生dom树结构用数据的方式描述</div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-05-08
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Vue/">Vue</a>
-            
-          </div>
-        
-        
-      </div>
-    </div>
-  </div>
-
-
+    <a href="/2020/05/08/postV-model%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">V-model数据双向绑定原理</span>
+      <span style="float: right;">05-08</span>
+    </a>
+  
+</div>
 
 
 
@@ -319,7 +258,7 @@ MVVM是一种设计思想，在MVVM结构下，View和Model是没有直接联系
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "An elegant Material-Design theme for Hexo&nbsp;",
+        "分类 - Vue&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
